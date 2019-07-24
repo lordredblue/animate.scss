@@ -1,3 +1,15 @@
+
+
+@mixin bounceOutDown($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(bounceOutDown);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+
+	@at-root {
 @include keyframes(bounceOutDown) {
   0% {
     @include transform(translateY(0));
@@ -10,14 +22,5 @@
     opacity: 0; 
     @include transform(translateY(2000px));
   }
-}
-
-@mixin bounceOutDown($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(bounceOutDown);
-  @include count($count);
-  @include duration($duration);
-  @include delay($delay);
-  @include function($function);
-  @include fill-mode($fill);
-  @include visibility($visibility);
+}	}
 }

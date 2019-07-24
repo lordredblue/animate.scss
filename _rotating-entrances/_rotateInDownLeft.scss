@@ -1,3 +1,14 @@
+
+@mixin rotateInDownLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(rotateInDownLeft);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+
+	@at-root {
 @include keyframes(rotateInDownLeft) {
   0% {
     opacity: 0;
@@ -10,13 +21,5 @@
     @include transform-origin(left bottom);
   }
 }
-
-@mixin rotateInDownLeft($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(rotateInDownLeft);
-  @include count($count);
-  @include duration($duration);
-  @include delay($delay);
-  @include function($function);
-  @include fill-mode($fill);
-  @include visibility($visibility);
+	}
 }

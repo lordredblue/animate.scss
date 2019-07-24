@@ -1,3 +1,14 @@
+
+@mixin flipInY($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(flipInY);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+
+	@at-root {
 @include keyframes(flipInY) {
   0% {
     opacity: 0;
@@ -14,13 +25,5 @@
     @include transform(perspective(400px) rotateY(0deg));
   }
 }
-
-@mixin flipInY($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(flipInY);
-  @include count($count);
-  @include duration($duration);
-  @include delay($delay);
-  @include function($function);
-  @include fill-mode($fill);
-  @include visibility($visibility);
+	}
 }

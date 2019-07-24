@@ -1,3 +1,14 @@
+
+@mixin hinge($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(hinge);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+
+	@at-root {
 @include keyframes(hinge) {
   0% {
     animation-timing-function: ease-in-out;
@@ -25,13 +36,5 @@
     @include transform(translateY(700px));
   }
 }
-
-@mixin hinge($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(hinge);
-  @include count($count);
-  @include duration($duration);
-  @include delay($delay);
-  @include function($function);
-  @include fill-mode($fill);
-  @include visibility($visibility);
+	}
 }

@@ -1,3 +1,14 @@
+
+@mixin flipInX($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(flipInX);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+
+	@at-root {
 @include keyframes(flipInX) {
   0% {
     opacity: 0;
@@ -14,13 +25,5 @@
     @include transform(perspective(400px) rotateX(0deg));
   }
 }
-
-@mixin flipInX($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(flipInX);
-  @include count($count);
-  @include duration($duration);
-  @include delay($delay);
-  @include function($function);
-  @include fill-mode($fill);
-  @include visibility($visibility);
+	}
 }

@@ -1,3 +1,14 @@
+
+@mixin zoomOutUp($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
+	@include animation-name(zoomOutUp);
+	@include count($count);
+	@include duration($duration);
+	@include delay($delay);
+	@include function($function);
+	@include fill-mode($fill);
+	@include visibility($visibility);
+
+	@at-root {
 @include keyframes(zoomOutUp) {
   40% {
     animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
@@ -11,13 +22,5 @@
     @include transform-origin(center bottom);
   }
 }
-
-@mixin zoomOutUp($count: $countDefault, $duration: $durationDefault, $delay: $delayDefault, $function: $functionDefault, $fill: $fillDefault, $visibility: $visibilityDefault) {
-  @include animation-name(zoomOutUp);
-  @include count($count);
-  @include duration($duration);
-  @include delay($delay);
-  @include function($function);
-  @include fill-mode($fill);
-  @include visibility($visibility);
+	}
 }
